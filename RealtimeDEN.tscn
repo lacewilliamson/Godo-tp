@@ -32,14 +32,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="cont_Plain" type="Container" parent="Pan_Main"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="te_Plain" type="TextEdit" parent="Pan_Main/cont_Plain"]
+[node name="te_Plain" type="TextEdit" parent="Pan_Main"]
 margin_left = 48.6937
 margin_top = 207.858
 margin_right = 323.694
@@ -51,14 +44,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="cont_OTP" type="Container" parent="Pan_Main"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="te_OTP" type="TextEdit" parent="Pan_Main/cont_OTP"]
+[node name="te_OTP" type="TextEdit" parent="Pan_Main"]
 margin_left = 374.694
 margin_top = 207.858
 margin_right = 649.694
@@ -70,14 +56,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="cont_Cypher" type="Container" parent="Pan_Main"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Text_CypherText" type="Label" parent="Pan_Main/cont_Cypher"]
+[node name="Text_CypherText" type="Label" parent="Pan_Main"]
 margin_left = 701.0
 margin_top = 208.0
 margin_right = 976.0

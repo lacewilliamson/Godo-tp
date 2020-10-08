@@ -1,0 +1,3 @@
+add clicking sound effects each time a character is entered
+center the footer text on the bottom panel better
+Option to import each field, and export the results.

@@ -1,0 +1,212 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://realtimeDEN.gd" type="Script" id=1]
+[ext_resource path="res://Orbitron-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Merriweather-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://UnselectedBG.tres" type="StyleBox" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.215686, 0.215686, 0.215686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.368627, 0.368627, 0.368627, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -62.0988 ]
+}
+
+[node name="Pan_Main" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_Title" type="Label" parent="Pan_Main"]
+margin_left = 256.0
+margin_top = 6.0
+margin_right = 768.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0.305882, 0.305882, 1 )
+custom_colors/font_color_shadow = Color( 0.254902, 0, 0, 1 )
+text = "Godo-tp"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_Footer" type="Label" parent="Pan_Main"]
+margin_left = 13.0
+margin_top = 579.0
+margin_right = 1005.0
+margin_bottom = 598.0
+rect_pivot_offset = Vector2( 360, 60 )
+custom_colors/font_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+text = "\"Godo-tp\"    v20201007 		                                                                                                                                                             (c) Lace Williamson 2020"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_Description" type="Label" parent="Pan_Main"]
+margin_left = 32.0
+margin_top = 35.0
+margin_right = 988.0
+margin_bottom = 155.0
+rect_pivot_offset = Vector2( 232, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "\"In cryptography, the one-time pad (OTP) is an encryption technique that cannot be cracked, but requires the use of a one-time pre-shared key the same size as, or longer than, the message being sent. In this technique, a plaintext is paired with a random secret key (also referred to as a one-time pad). Then, each bit or character of the plaintext is encrypted by combining it with the corresponding bit or character from the pad using modular addition.\"	 -	 Wikipedia"
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pan_Content" type="Panel" parent="Pan_Main"]
+margin_left = 24.0
+margin_top = 146.0
+margin_right = 1000.0
+margin_bottom = 571.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_LeftPanel" type="Label" parent="Pan_Main/Pan_Content"]
+margin_left = 40.0
+margin_top = 12.0
+margin_right = 296.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 208, 9 )
+text = "Text to be encrypted / decrypted"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_MidPanel" type="Label" parent="Pan_Main/Pan_Content"]
+margin_left = 360.0
+margin_top = 12.0
+margin_right = 616.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 208, 9 )
+text = "ONE-TIME PAD"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_RightPanel" type="Label" parent="Pan_Main/Pan_Content"]
+margin_left = 681.0
+margin_top = 13.0
+margin_right = 937.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 208, 9 )
+text = "Processed Text"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_Plain" type="TextEdit" parent="Pan_Main/Pan_Content"]
+margin_left = 40.0
+margin_top = 46.0
+margin_right = 296.0
+margin_bottom = 346.0
+focus_next = NodePath("../te_OTP")
+focus_previous = NodePath("../te_CypherText")
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_OTP" type="TextEdit" parent="Pan_Main/Pan_Content"]
+margin_left = 360.0
+margin_top = 45.0
+margin_right = 616.0
+margin_bottom = 345.0
+focus_next = NodePath("../te_CypherText")
+focus_previous = NodePath("../te_Plain")
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_CypherText" type="TextEdit" parent="Pan_Main/Pan_Content"]
+margin_left = 681.0
+margin_top = 44.0
+margin_right = 936.0
+margin_bottom = 344.0
+focus_next = NodePath("../te_Plain")
+focus_previous = NodePath("../te_OTP")
+custom_styles/normal = ExtResource( 4 )
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Encrypt" type="Button" parent="Pan_Main/Pan_Content"]
+margin_left = 252.0
+margin_top = 363.0
+margin_right = 403.0
+margin_bottom = 412.0
+text = "Encrypt"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Decrypt" type="Button" parent="Pan_Main/Pan_Content"]
+margin_left = 573.0
+margin_top = 363.0
+margin_right = 724.0
+margin_bottom = 412.0
+text = "Decrypt"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_HelpfulHints" type="Label" parent="Pan_Main/Pan_Content"]
+margin_left = 168.0
+margin_top = 429.0
+margin_right = 808.0
+margin_bottom = 450.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.329412, 0.329412, 0.329412, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Pan_Main/Pan_Content/btn_Encrypt" to="." method="_on_btn_Encrypt_pressed"]
+[connection signal="pressed" from="Pan_Main/Pan_Content/btn_Decrypt" to="." method="_on_btn_Decrypt_pressed"]

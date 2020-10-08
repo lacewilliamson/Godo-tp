@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://realtimeDEN.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.396078, 0.262745, 0.262745, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -62.0988 ]
+}
+
+[node name="Pan_Main" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_Main" type="Label" parent="Pan_Main"]
+margin_left = 34.0
+margin_right = 990.0
+margin_bottom = 120.0
+text = "
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue elit sit amet justo molestie bibendum. Donec gravida dignissim scelerisque. Fusce sit amet pretium mi, et tincidunt arcu. Nulla venenatis pulvinar massa non pharetra. Aenean efficitur mauris vitae quam porta, sit amet fringilla sem hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam volutpat posuere lacus. Ut in sem quis velit dignissim vehicula non vitae mi. Aliquam eu felis vel nisl imperdiet aliquam at quis ipsum. In justo lacus, pulvinar eget aliquet eu, ultrices sed lacus."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cont_Plain" type="Container" parent="Pan_Main"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_Plain" type="TextEdit" parent="Pan_Main/cont_Plain"]
+margin_left = 48.6937
+margin_top = 207.858
+margin_right = 323.694
+margin_bottom = 557.858
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cont_OTP" type="Container" parent="Pan_Main"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_OTP" type="TextEdit" parent="Pan_Main/cont_OTP"]
+margin_left = 374.694
+margin_top = 207.858
+margin_right = 649.694
+margin_bottom = 557.858
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cont_Cypher" type="Container" parent="Pan_Main"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text_CypherText" type="Label" parent="Pan_Main/cont_Cypher"]
+margin_left = 701.0
+margin_top = 208.0
+margin_right = 976.0
+margin_bottom = 558.0
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_HelpfulHints" type="Label" parent="Pan_Main"]
+margin_left = 311.694
+margin_top = 573.888
+margin_right = 716.694
+margin_bottom = 587.888
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Encrypt" type="Button" parent="Pan_Main"]
+margin_left = 416.014
+margin_top = 133.991
+margin_right = 603.014
+margin_bottom = 167.991
+toggle_mode = true
+pressed = true
+text = "Encrypting"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="toggled" from="Pan_Main/btn_Encrypt" to="." method="_on_btn_Encrypt_toggled"]
